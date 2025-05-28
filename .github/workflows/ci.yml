@@ -24,7 +24,7 @@ jobs:
           pip install pytest
 
       - name: Run tests
-  run: PYTHONPATH=. pytest
+        run: PYTHONPATH=. pytest
 
   build:
     needs: test
@@ -35,4 +35,3 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t myapp:latest .
-
